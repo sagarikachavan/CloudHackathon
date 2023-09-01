@@ -1,0 +1,156 @@
+version: '3.3'  # version of compose format
+
+services:
+  landing-service:
+    build: ./landing  # path is relative to docker-compose.yml location
+    hostname: landing-service
+    ports:
+      - 5050:5050  # host:container
+    networks:
+      sample:
+        aliases:
+          - landing-service
+  # Add more services below
+
+  add-service:
+    build: ./add  # path is relative to docker-compose.yml location
+    hostname: add-service
+    ports:
+      - 5051:5051  # host:container
+    networks:
+      sample:
+        aliases:
+          - add-service
+
+  sub-service:
+    build: ./sub  # path is relative to docker-compose.yml location
+    hostname: sub-service
+    ports:
+      - 5052:5052  # host:container
+    networks:
+      sample:
+        aliases:
+          - sub-service
+
+  mul-service:
+    build: ./mul  # path is relative to docker-compose.yml location
+    hostname: mul-service
+    ports:
+      - 5053:5053  # host:container
+    networks:
+      sample:
+        aliases:
+          - mul-service
+        
+  div-service:
+    build: ./div  # path is relative to docker-compose.yml location
+    hostname: div-service
+    ports:
+      - 5054:5054  # host:container
+    networks:
+      sample:
+        aliases:
+          - div-service
+
+  equal-service:
+    build: ./equal  # path is relative to docker-compose.yml location
+    hostname: equal-service
+    ports:
+      - 5055:5055  # host:container
+    networks:
+      sample:
+        aliases:
+          - equal-service
+
+  greater_than-service:
+    build: ./greater_than  # path is relative to docker-compose.yml location
+    hostname: greater_than-service
+    ports:
+      - 5056:5056  # host:container
+    networks:
+      sample:
+        aliases:
+          - greater_than-service
+
+  less_than-service:
+    build: ./less_than  # path is relative to docker-compose.yml location
+    hostname: less_than-service
+    ports:
+      - 5057:5057  # host:container
+    networks:
+      sample:
+        aliases:
+          - less_than-service
+
+  modulus-service:
+    build: ./modulus  # path is relative to docker-compose.yml location
+    hostname: modulus-service
+    ports:
+      - 5058:5058  # host:container
+    networks:
+      sample:
+        aliases:
+          - modulus-service
+
+  exponent-service:
+    build: ./exponent  # path is relative to docker-compose.yml location
+    hostname: exponent-service
+    ports:
+      - 5059:5059  # host:container
+    networks:
+      sample:
+        aliases:
+          - exponent-service
+
+  gcd-service:
+    build: ./gcd  # path is relative to docker-compose.yml location
+    hostname: gcd-service
+    ports:
+      - 5060:5060  # host:container
+    networks:
+      sample:
+        aliases:
+          - gcd-service
+
+  lcm-service:
+    build: ./lcm  # path is relative to docker-compose.yml location
+    hostname: lcm-service
+    ports:
+      - 5061:5061  # host:container
+    networks:
+      sample:
+        aliases:
+          - lcm-service
+
+  and-service:
+    build: ./and  # path is relative to docker-compose.yml location
+    hostname: and-service
+    ports:
+      - 5062:5062  # host:container
+    networks:
+      sample:
+        aliases:
+          - and-service
+
+  or-service:
+    build: ./or  # path is relative to docker-compose.yml location
+    hostname: or-service
+    ports:
+      - 5063:5063  # host:container
+    networks:
+      sample:
+        aliases:
+          - or-service
+
+  xor-service:
+    build: ./xor  # path is relative to docker-compose.yml location
+    hostname: xor-service
+    ports:
+      - 5064:5064  # host:container
+    networks:
+      sample:
+        aliases:
+          - xor-service
+
+networks:
+  sample:
